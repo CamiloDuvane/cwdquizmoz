@@ -1,0 +1,155 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #009933, #ffcc00, #cc0000);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.question {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.option {
+  background-color: #009933;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.option:hover {
+  background-color: #00cc44;
+}
+
+.prize {
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.progress {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.cwd {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.maputo-skyline {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: -1;
+}
+
+.timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.correct {
+  background-color: #e6f3ff !important;
+}
+
+.incorrect {
+  background-color: #cc0000 !important;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 30px;
+  border: 2px solid #009933;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #009933;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  background-color: #009933;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #00cc44;
+}
+
+.modal-content a {
+  color: #009933;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}

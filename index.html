@@ -1,0 +1,66 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CWD Moçambique Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <h2>Entrar</h2>
+      <div id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Senha" required>
+        <button onclick="loginUser()">Entrar</button>
+        <p>Não tem uma conta? <a href="#" onclick="showRegistrationForm()">Registrar</a></p>
+      </div>
+      <div id="registrationForm" style="display: none;">
+        <input type="text" id="regName" placeholder="Nome" required>
+        <input type="number" id="regAge" placeholder="Idade" required>
+        <select id="regGender" required>
+          <option value="">Selecione o sexo</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+          <option value="Outro">Outro</option>
+        </select>
+        <input type="tel" id="regContact" placeholder="Contacto" required>
+        <input type="email" id="regEmail" placeholder="Email" required>
+        <input type="password" id="regPassword" placeholder="Senha" required>
+        <button onclick="registerUser()">Registrar</button>
+        <p>Já tem uma conta? <a href="#" onclick="showLoginForm()">Entrar</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="profileModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h2>Perfil do Jogador</h2>
+      <div id="profileInfo"></div>
+      <button onclick="startGame()">Iniciar Jogo</button>
+    </div>
+  </div>
+
+  <div class="game-container" style="display: none;">
+    <div class="timer" id="timer">30</div>
+    <h1>CWD Moçambique Quiz</h1>
+    <div class="question" id="question">Carregando pergunta...</div>
+    <div class="options" id="options"></div>
+    <div class="prize" id="prize">Pontos: 0</div>
+    <div class="cwd" id="cwd">@CWD2024</div>
+  </div>
+
+  <svg class="maputo-skyline" viewBox="0 0 1000 200" preserveAspectRatio="none">
+    <path d="M0,200 L0,100 Q250,50 500,100 T1000,100 L1000,200 Z" fill="#000" />
+    <rect x="100" y="70" width="40" height="130" fill="#333" />
+    <rect x="300" y="50" width="60" height="150" fill="#444" />
+    <rect x="500" y="30" width="80" height="170" fill="#555" />
+    <rect x="700" y="60" width="50" height="140" fill="#666" />
+    <rect x="900" y="80" width="30" height="120" fill="#777" />
+  </svg>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="auth.js"></script>
+  <script defer src="quiz.js"></script>
+</body>
+</html>
